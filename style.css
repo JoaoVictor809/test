@@ -1,0 +1,251 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    
+    background-color: #fde9f5;
+    font-family: Impact, sans-serif;
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur834.cur'), auto;
+    background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
+    background-color: #fde9f5;
+}
+
+.centro-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1; 
+}
+
+h1{
+   color: #e02596;
+   align-content: center;
+   text-align: center;
+   padding: 10px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+nav li{
+    list-style-type: none;
+    margin: 10px;
+}
+nav a {
+    color: hotpink;
+    font-weight: bold;
+    font-family: 'Courier New';
+    text-decoration: none;
+    border: 2px dashed hotpink;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #fff0f5;
+}
+nav a:hover {
+    background-color: hotpink;
+    color: white;
+}
+nav #hom{
+    color: #e02596;
+}
+
+ .labios{
+    margin: 20px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    margin: 10vh;
+    flex-direction: row;
+    column-gap: 10vh; /*é o espaçamento da "coluna na vertical*/
+}
+
+.item{
+    border: solid #ff69b4 2px;
+    width: 600px;
+    height: 250px;
+    padding: 40px;
+    text-align: center;
+    background-color: #fff0f5; 
+    box-shadow: 0px 0px 20px #ff99cc;
+    border-radius: 10px;
+}
+.itemr{
+    border: solid #ff69b4 2px;
+    width: 250px;
+    height: 460px;
+    padding: 20px;
+    text-align: center;
+    background-color: #e02596; 
+    box-shadow: 0px 0px 20px #ff99cc;
+    border-radius: 10px;
+}  
+
+@keyframes piscar {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.marquee-glow {
+  animation: piscar 1s infinite;
+  font-weight: bold;
+  color: #e02596;
+  text-shadow: 0 0 5px hotpink;
+}
+
+.status-bar {
+  position: fixed;
+  bottom: 10px;   
+  left: 10px;    
+  
+  background-color: black;
+  color: lime;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  
+  padding: 6px 10px;
+  border: 1px solid lime;
+  border-radius: 5px;
+
+  opacity: 0.9;
+  z-index: 9999;
+}
+
+footer{
+ text-align: center;
+ bottom: 0;
+ width: 100%;
+ padding: 5px 10px;
+  font-family: 'Comic Sans MS';
+  background-color: hotpink;
+  color: rgb(0, 0, 0);
+  font-size: 12px;
+  border-top: 2px dashed rgb(0, 0, 0);
+  
+}
+
+
+/*dark mode*/
+#toggle-dark-mode {
+    background: linear-gradient(#ff66cc, #cc33ff);
+    color: white;
+    border: 2px outset white;
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 14px;
+    padding: 6px 15px;
+    box-shadow: 2px 2px 5px #888;
+    border-radius: 5px;
+    cursor: url('https://cur.cursors-4u.net/cursors/cur-9/cur834.cur'), auto;
+    transition: 0.3s;
+}
+#toggle-dark-mode:hover {
+    background: linear-gradient(#cc33ff, #ff66cc);
+}
+
+body.dark-mode {
+    background-color: #001f3f;
+    color: #ffffff;
+}
+
+body.dark-mode .item {
+    background-color: #e02596;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.dark-mode .itemr {
+    background-color: #e02596;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+body.dark-mode nav a {
+    color: #000000;
+}
+
+body.dark-mode nav a:hover {
+    color: #e02596;
+}
+
+body.dark-mode footer {
+    background-color: #e02596;
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        margin: 10px;
+        font-size: 14px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        margin: 5vh;
+        row-gap: 5vh;
+    }
+
+    .item, .itemr {
+        width: 90%;
+        height: auto;
+        min-height: 200px;
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 12px;
+    }
+
+    main {
+        margin: 2vh;
+    }
+
+    .item, .itemr {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+
+    .labios {
+        margin: 10px;
+    }
+}
